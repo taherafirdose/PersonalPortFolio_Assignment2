@@ -33,11 +33,11 @@ body h1,h2,h3,h4,h5,h6{
     -moz-background-size: cover;
     -o-background-size: cover;
     -ms-background-size: cover;
-    min-height:150px;
+    /* min-height:150px; */
 	position: relative;
 }
 .top-header {
-	padding: 2em 0;
+	padding: 1em 0;
 }
 .logo h1 {
 
@@ -53,10 +53,12 @@ body h1,h2,h3,h4,h5,h6{
 }
 .logo span {
     border: 3px crimson;
-	
+	margin-left: -180px;
     padding: 2px 14px;
-    font-size: 1em;
+    font-size: 0.9em;
     color: crimson;
+	margin-top: 50px;
+
 }
 .logo{
 	float:left;
@@ -69,7 +71,7 @@ body h1,h2,h3,h4,h5,h6{
 }
 .navigation-right ul li a{
 	color:#fff;
-    font-size:1.2em;
+    font-size:1.1em;
     text-decoration: none;
     padding: 10px 0;
 	text-transform:uppercase;
@@ -81,6 +83,15 @@ body h1,h2,h3,h4,h5,h6{
 span.menu{
 	display:none;
 }
+
+.navigation-right ul li.navbar-text{
+	float: right !important;
+    color: white;
+	margin-right:-180px;
+    margin-left: 15px;
+    margin-top: -11px;
+}
+
 /*-- nav-hover --*/
 .link-effect-3 a {
 	padding: 10px 0;
@@ -1231,8 +1242,12 @@ span.border.two:after {
     -moz-background-size: cover;
     -o-background-size: cover;
     -ms-background-size: cover;
-    min-height: 100px;
-    padding:5em 0 0em 0;
+    height:100px; /* height of the footer */
+    clear:both;
+    padding:0.1em 0 0em 0;
+	
+
+	
 }
 .footer_top ul li{	
 	font-size:22px;
@@ -1256,7 +1271,7 @@ span.border.two:after {
 .copy_right p {
       color: #fff;
     font-size: 0.9em;
-    line-height: 1.9em;
+    line-height: 1em;
     margin: 1em 0;
 }
 .copy_right p a{
@@ -1378,7 +1393,7 @@ span.border.two:after {
 }
 @media(max-width:991px){
 	.navigation-right ul li a {
-       font-size: 0.9em;
+       font-size: 1.0em;
 	}
 	.link-effect-3 a {
 		padding: 10px 0;
