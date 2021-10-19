@@ -14,7 +14,7 @@ const e = require("express");
                 if(!confirm("Are you sure?")) 
                 {
                     event.preventDefault();
-                    window.location.assign('/business-contact-list');
+                    window.location.assign('/businesscontact-list');
                 }
             });
         }
@@ -24,8 +24,5 @@ const e = require("express");
 
 })();
 
-// alert message on submission
-function clicked() {
-    return confirm("Successfully Submitted");
-}
+
 

@@ -1,7 +1,11 @@
 <%- include ../partials/header.ejs %>
 
-
-  
+<style>
+    body {
+      background-image: url('Assets/images/contactback.jpg');
+      background-size: cover;
+    }
+  </style>
 <!-- Content for the Add page -->
 <div class="container">
     <div class="row">
@@ -14,9 +18,7 @@
                     <input type="text" class="form-control"
                     id="nameTextField"
                     placeholder="Enter the Contact Name"
-                    name="contact_name" 
-                    value="<%= business.contact_name %>"
-                    required>
+                    name="contact_name" required>
                 </div>
 
                 <div class="form-group">
@@ -24,25 +26,21 @@
                     <input type="text" class="form-control"
                     id="authorTextField"
                     placeholder="Enter the Contact Number"
-                    name="contact_number" 
-                    value="<%= business.contact_number %>"
-                    required>
+                    name="contact_number" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="publishedTextField">E-mail ID</label>
+                    <label for="publishedTextField">Email ID</label>
                     <input type="text" class="form-control"
                     id="publishedTextField"
-                    placeholder="Enter the E-mail address"
-                    name="email_address" 
-                    value="<%= business.email_address %>"
-                    required>
-                </div>
+                    placeholder="Enter the email address"
+                    name="email_address" required>
+                </div>               
 
                 <button class="btn btn-primary" type="submit">
                     <i class="fas fa-edit"></i> Submit</button>
                 
-                    <a href="/business-contact-list" class="btn btn-warning">
+                    <a href="/businesscontact-list" class="btn btn-warning">
                         <i class="fas fa-undo"></i> Cancel</a>
 
             </form>
@@ -51,6 +49,7 @@
     </div>
 </div>
 
+ 
 
 
 

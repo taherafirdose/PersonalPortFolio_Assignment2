@@ -6,7 +6,7 @@ let jwt = require('jsonwebtoken');
 
 let passport = require('passport');
 
-let businessController = require('../controllers/business');
+let businessController = require('../controllers/businessContacts');
 
 // helper function for guard purposes
 function requireAuth(req, res, next)

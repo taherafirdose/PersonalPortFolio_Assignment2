@@ -5,7 +5,7 @@ let mongoose = require('mongoose');
 let jwt = require('jsonwebtoken');
 
 // create a reference to the model
-let Business = require('../models/business');
+let Business = require('../models/businessContacts');
 
 module.exports.displayBusinessList = (req, res, next) => {
     Business.find((err, businessList) => {
@@ -18,7 +18,7 @@ module.exports.displayBusinessList = (req, res, next) => {
         {
             //console.log(Business contact List);
 
-            res.render('business/list', 
+            res.render('businessContacts/list', 
             {title: 'Business Contact', 
             BusinessList: businessList, 
             displayName: req.user ? req.user.displayName : ''});      
@@ -27,7 +27,7 @@ module.exports.displayBusinessList = (req, res, next) => {
 }
 
 module.exports.displayAddPage = (req, res, next) => {
-    res.render('business/add', {title: 'Add Business contact', 
+    res.render('businessContacts/add', {title: 'Add Business Contact', 
     displayName: req.user ? req.user.displayName : ''})          
 }
 
@@ -47,7 +47,7 @@ module.exports.processAddPage = (req, res, next) => {
         else
         {
             // refresh the Business contact list
-            res.redirect('/business-contact-list');
+                 res.redirect('/businesscontact-list');
         }
     });
 
@@ -65,7 +65,7 @@ module.exports.displayEditPage = (req, res, next) => {
         else
         {
             //show the edit view
-            res.render('business/edit', {title: 'Edit Business Contact', business: BusinessToEdit, 
+            res.render('businessContacts/edit', {title: 'Edit Business Contact', business: BusinessToEdit, 
             displayName: req.user ? req.user.displayName : ''})
         }
     });
@@ -90,7 +90,7 @@ module.exports.processEditPage = (req, res, next) => {
         else
         {
             // refresh the business contact list
-            res.redirect('/business-contact-list');
+            res.redirect('/businesscontact-list');
         }
     });
 }
@@ -107,7 +107,7 @@ module.exports.performDelete = (req, res, next) => {
         else
         {
              // refresh the business contact list
-             res.redirect('/business-contact-list');
+             res.redirect('/businesscontact-list');
         }
     });
 }
